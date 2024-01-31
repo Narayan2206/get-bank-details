@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(97, 97, 97, 0.5);
+    background-image: url('./moneybg.jpg');
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: rgba(255,255,255,0.8);
+    width: 60%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blue(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+form{
+    padding: 8px 0;
+}
+
+.input-field{
+    font-size: 1rem;
+    padding: 2px;
+    
+}
+
+.input-field:focus{
+    outline: none;
+}
+
+.btn{
+    color: white;
+    background-color: black;
+    padding: 6px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-left: 6px;
+}
+
+.btn:hover{
+    background-color: rgb(31, 31, 31);
+}
+
+.bank-details{
+    padding-top: 8px;
+    width: 80%;
+}
+
+.bank-details li{
+    list-style: none;
+}
+
+.text-bold{
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 600px){
+    
+    h1{
+        font-size: 20px;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    form{
+        margin-top: 5%;
+    }
+
+    .input-field{
+        display: block;
+        margin: auto;
+    }
+
+    .btn{
+        display: block;
+        margin: auto;
+        margin-top: 5%;
+        padding: 8px 20px;
+    }
+
+    .bank-details{
+        width: 100%;
+    }
+}

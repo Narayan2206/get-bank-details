@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Bank Details</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Get Bank Details</h1>
+        <form action="/getdetails" method="post">
+            <input class="input-field" type="text" name="ifsc" placeholder="Enter IFSC..." autofocus>
+            <input class="btn" type="submit" value="Get Details">
+        </form>
+        <ul class="bank-details">
+            <% if(locals.content) { %>
+                <li><span class="text-bold">Bank:</span> <%=content.BANK %>
+                </li>
+                <li><span class="text-bold">District:</span> <%=content.DISTRICT %>
+                </li>
+                <li><span class="text-bold">State:</span> <%=content.STATE %>
+                </li>
+                <li><span class="text-bold">Address:</span> <%=content.ADDRESS %>
+                </li>
+                <li><span class="text-bold">Contact:</span> <%=content.CONTACT %>
+                </li>
+                <li><span class="text-bold">IFSC:</span> <%=content.IFSC %>
+                </li>
+                <% } %>
+                    <% if(locals.error) { %>
+                        <li>
+                            <%= error %>
+                        </li>
+                        <% } %>
+        </ul>
+    </div>
+</body>
+
+</html>
